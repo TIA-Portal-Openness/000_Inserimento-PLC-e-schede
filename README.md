@@ -10,3 +10,5 @@ Semplice esempio TIA Portal Openness che esegue le seguenti operazioni:
 RISULTATO
 
 ![Es0](https://user-images.githubusercontent.com/108678849/196917622-7cab2f0d-db52-4b9f-8cfe-c92768f47563.png)
+
+![Es0_bis](https://user-images.githubusercontent.com/108678849/197053546-9a0f2592-2b3a-48ad-98fc-3b83259d86bf.png)
