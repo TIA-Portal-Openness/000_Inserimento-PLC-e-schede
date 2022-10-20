@@ -18,13 +18,11 @@ namespace ConsoleApp_CreazioneHW
     {
         static void Main(string[] args)
         {
-            //Creazione progetto
+            //Aggancio a progetto aperto
 	    IList<TiaPortalProcess> ProcessiTIAAperti = TiaPortal.GetProcesses();
             TiaPortalProcess mioProcessoTIAPortal = ProcessiTIAAperti[0];
             TiaPortal mioTiaPortal = ProcessoTIAPortal.Attach();
-            DirectoryInfo directoryProgetto = new DirectoryInfo(@"D:\Temporanei\Openness\Polarion");
-            Project mioProgettoTIA = mioTiaPortal.Projects.Create(directoryProgetto, "Test");
-            Console.WriteLine("Progetto creato");
+            Console.WriteLine("Progetto pronto!");
 
             // Inserimento PLC di Linea
             Device miaStazionePLCLinea = progettoTIA.Devices.CreateWithItem("OrderNumber:6ES7 513-1FL02-0AB0/V2.9", "PLC_Linea", "PLC_Linea");            
