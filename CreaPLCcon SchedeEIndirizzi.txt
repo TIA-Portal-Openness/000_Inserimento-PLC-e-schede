@@ -21,11 +21,12 @@ namespace ConsoleApp_CreazioneHW
             //Aggancio a progetto aperto
 	    IList<TiaPortalProcess> ProcessiTIAAperti = TiaPortal.GetProcesses();
             TiaPortalProcess mioProcessoTIAPortal = ProcessiTIAAperti[0];
-            TiaPortal mioTiaPortal = ProcessoTIAPortal.Attach();
+            TiaPortal mioTIAPortal = mioProcessoTIAPortal.Attach();
+	    Project mioProgettoTIA = mioTIAPortal.Projects[0];
             Console.WriteLine("Progetto pronto!");
 
             // Inserimento PLC di Linea
-            Device miaStazionePLCLinea = progettoTIA.Devices.CreateWithItem("OrderNumber:6ES7 513-1FL02-0AB0/V2.9", "PLC_Linea", "PLC_Linea");            
+            Device miaStazionePLCLinea = mioProgettoTIA.Devices.CreateWithItem("OrderNumber:6ES7 513-1FL02-0AB0/V2.9", "PLC_Linea", "PLC_Linea");            
             
 	    //Modifica Indirizzo IP PLC
             DeviceItem mioPlcLinea = miaStazionePLCLinea.DeviceItems[1];
@@ -43,7 +44,7 @@ namespace ConsoleApp_CreazioneHW
 	    mioDatiIndirizzoSottomodulo.SetAttribute("StartAddress",0);
 
 	    //Salva progetto
-           progettoTIA.Save();
+           mioProgettoTIA.Save();
 
         }
     }
